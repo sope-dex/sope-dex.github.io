@@ -1,31 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOPE-DEX Project</title>
-    <style>
-        body {
-            font-family: Helvetica, Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            font-family: Helvetica, Arial, sans-serif;
-            text-align: center;
-            color: #333;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-    </style>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title> SOPE-DEX </title>
+	<link href="res/css/bootstrap.min.css" rel="stylesheet">
+	<script src="res/css/fa.js"></script>
+
+	<style>
+      .header {
+        width: auto;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+      }
+
+      a:link,a:visited
+      {
+        color: #0071bc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #208799;
+      }
+
+      .section-div {height: 3em}
+      .content-div {height: 1em}
+
+      .no-gutters {
+	      margin-right: 0;
+	      margin-left: 0;
+      }
+
+	  .btn {
+	      margin-left: 0.2rem;
+	  	  margin-right: 0.2rem;
+	  }
+
+	</style>
 </head>
-<body>
-    <h1>SOPE-DEX: Singulate Objects in Packed Environments using DEXterous hand</h1>
-</body>
+
+<div class="header">
+	<center><h1>Learning to Singulate Objects in Packed Environments <br>using a Dexterous Hand</h1></center>
+	<div class="content-div"></div>
+	<center>
+		<a href="https://haojiang4400.github.io/" target="_blank" style="font-size:18px">Hao Jiang</a><sup style="font-size:12px">&nbsp</sup>,&nbsp
+		<a href="https://yuhaiw.github.io" target="_blank" style="font-size:18px">Yuhai Wang</a><sup style="font-size:12px">&nbsp*</sup>,&nbsp
+		<a href="https://hanyang-zhou.github.io/" target="_blank" style="font-size:18px">Hanyang Zhou</a><sup style="font-size:12px">&nbsp*</sup>,&nbsp
+		<a href="https://danielseita.github.io/" target="_blank" style="font-size:18px">Daniel Seita</a><sup style="font-size:12px">&nbsp</sup>
+	</center>
+
+	<center>
+		<sup style="font-size:12px">&nbsp*</sup> Equal Contribution
+	</center>
+
+	<div class="content-div"></div>
+	<center>
+		&nbspUniversity of Southern California
+	</center>
+
+	<div class="content-div"></div>
+	<center>
+		<div class="btn-group" role="group">
+
+			<a href="https://arxiv.org/" target="_blank">
+				<button type="button" class="btn btn-dark"><span class="icon">
+					<i class="fas fa-file-pdf"></i> Paper
+				</span></button>
+			</a>
+
+			<a href="https://github.com/" target="_blank">
+				<button type="button" class="btn btn-dark"><span class="icon">
+					<i class="fab fa-github"></i> Code
+				</span></button>
+			</a>
+
+			<a href="https://www.youtube.com/" target="_blank">
+				<button type="button" class="btn btn-dark"><span class="icon">
+					<i class="fab fa-youtube"></i> Video
+				</span></button>
+			</a>
+
+			<a href="https://twitter.com/" target="_blank">
+				<button type="button" class="btn btn-dark"><span class="icon">
+					<i class="fab fa-twitter"></i> Twitter
+				</span></button>
+        	</a>
+
+		</div>
+	</center>
+</div>
+
+<div class="container">
+	<!--------------------- abstract --------------------->
+	<center>
+    <div class="col">
+      <center>
+        <iframe width="1120" height="630" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=w-u0UVNOTzaH88oh&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- <video playsinline autoplay loop muted src="videos/main.mp4" width="100%" preload="metadata"
+           style="border-radius:10px;"></video> -->
+      </center>
+    </div>
+    <div class="content-div"></div>  
+
+		<h2> Abstract </h2>
+		<div class="content-div"></div>
+		<p style="width:75%; text-align: justify; white-space: normal;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+	</center>
+
+	<div class="content-div"></div>  
+
+	<!-- <center>
+		<h2> Real-world Results </h2>
+	</center>
+	<div class="content-div"></div>
+	<div class="col">
+		<center><video playsinline autoplay loop muted controls src="their_videos/teaser_web.mp4" width="100%" preload="metadata"
+			   style="border-radius:10px;"></video>
+		</center>
+	</div>
+
+	<center>
+		<div class="section-div"></div>
+		<h2> Sim-to-Real does not work for Pen Spinning </h2>
+
+		<p style="width:75%; text-align: justify; white-space: normal;">
+			Despite the great progress in sim-to-real for in-hand manipulation, we find that it does not directly apply to our task due to the large sim-to-real gap.
+			While this gap generally exists in previous work, the extreme difficulty of spinning pen-like objects exacerbates it further.
+			Although we did extensive exploration and iterations on hardware design, object selection, and different input modalities, we have not achieved any success.
+			The object is always easily dropped or even completely fails due to the distribution shift.
+		</p>
+
+		<center>
+			<video playsinline autoplay loop muted controls src="their_videos/sim2real_fail1.mp4" width="99%" style="border-radius:10px;"></video>
+		</center>
+
+		<center>
+			<video playsinline autoplay loop muted controls src="their_videos/sim2real_fail2.mp4" width="99%" style="border-radius:10px;"></video>
+		</center>
+	</center>
+
+	<center>
+		<div class="section-div"></div>
+		<h2> How did we achieve this? </h2>
+		<div class="content-div"></div>
+		<img class="img-fluid" src="res/method.png" style="margin-bottom: 30px" width="100%" alt=""><br>
+		<p style="width:75%; text-align: justify; white-space: normal;"> An overview of our approach. We first train an oracle policy in simulation using reinforcement learning. This policy provides high-quality trajectory and action datasets. We use this dataset to train a student policy and as an open-loop controller in the real world to collect successful real-world trajectories. Finally, we fine-tune the student policy using this real-world dataset. </p>
+	</center>
+
+
+	<div class="section-div"></div>
+	<center>
+	<h2> Qualitative Comparison for Oracle Policy </h2>
+	</center>
+	<div class="content-div"></div>
+	<div class="row align-items-center">
+		<div class="col-md-4 align-column-center">
+			<center>
+				<h5> Our Method. </h5>
+				Emergent Fingergaiting. <br>
+				Continuous Spinning.
+			</center>
+			<div class="content-div"></div>
+			<center>
+				<video playsinline autoplay loop muted src="their_videos/ours.mp4" width="99%" style="border-radius:10px;"></video>
+			</center>
+		</div>
+		<div class="col-md-4 align-column-center">
+			<center>
+				<h5> Single Canonical Pose </h5>
+				No Fingergaiting. <br>
+				Inefficient exploration.
+				<div class="content-div"></div>
+				<video playsinline autoplay loop muted src="their_videos/sim_single_init.mp4" width="99%" style="border-radius:10px;"></video>
+			</center>
+		</div>
+		<div class="col-md-4 align-column-center">
+			<center>
+				<h5> Without Z-reward </h5>
+				Objects tilted in certain timesteps. <br>
+				Easily slip in the real-world. <br>
+				<div class="content-div"></div>
+				<video playsinline autoplay loop muted src="their_videos/sim_no_z.mp4" width="99%" style="border-radius:10px;"></video>
+			</center>
+		</div>
+	</div>
+
+
+	<div class="section-div"></div>
+	<center>
+	<h2> Failure Cases (Baselines) </h2>
+	</center>
+	<div class="content-div"></div>
+	<div class="row align-items-center">
+		<div class="col-md-4 align-column-center">
+			<center>
+				<h5> Open-loop Replay </h5>
+				The motion is reasonable but not reactive and generalizable enough.
+				<div class="content-div"></div>
+				<video playsinline autoplay loop muted src="their_videos/fail_teacher_replay.mp4" width="99%" style="border-radius:10px;"></video>
+			</center>
+		</div>
+		<div class="col-md-4 align-column-center">
+			<center>
+				<h5> Simulation Pre-training Only </h5>
+				Not able to finish the task since the large sim-to-real gap.
+				<div class="content-div"></div>
+				<video playsinline autoplay loop muted src="their_videos/fail_only_pretraining.mp4" width="99%" style="border-radius:10px;"></video>
+			</center>
+		</div>
+		<div class="col-md-4 align-column-center">
+			<center>
+				<h5> Vision Distillation </h5>
+				Object oscillates resulting in large OOD error for vision systems.
+				<div class="content-div"></div>
+				<video playsinline autoplay loop muted src="their_videos/fail_vision.mp4" width="99%" style="border-radius:10px;"></video>
+			</center>
+		</div>
+	</div>
+
+	<div class="section-div"></div>
+	<center>
+	<h2> Failure Cases (Our Method) </h2>
+	</center>
+	<div class="content-div"></div>
+	<div class="row align-items-center">
+		<div class="col-md-4 align-column-center">
+			<center>
+Control Frequency not high enough to catch fast falling objects.
+			<div class="content-div"></div>
+				<video playsinline autoplay loop muted src="their_videos/ours_fail1.mp4" width="99%"
+				       style="border-radius:10px;"></video>
+			</center>
+		</div>
+		<div class="col-md-4 align-column-center">
+			<center>
+Control Frequency not high enough to catch fast falling objects.
+				<div class="content-div"></div>
+				<video playsinline autoplay loop muted src="their_videos/ours_fail2.mp4" width="99%"
+				       style="border-radius:10px;"></video>
+			</center>
+		</div>
+		<div class="col-md-4 align-column-center">
+			<center>
+				Center-of-mass shifts during spinning, resulting in unstable configuration.
+				<div class="content-div"></div>
+				<video playsinline autoplay loop muted src="their_videos/ours_fail3.mp4" width="99%"
+				       style="border-radius:10px;"></video>
+			</center>
+		</div>
+	</div>
+
+	<div class="section-div"></div>
+	<center>
+	<h2> Lessons Learned </h2>
+	</center>
+	<div class="content-div"></div>
+	<div class="row align-items-center">
+		<div style="width: 12.5%">
+		</div>
+		<div style="width:75%; hyphens: auto; ">
+			<ul>
+				<li><b>Simulation training requires extensive design for exploration</b>, such as the proper design of initial distributions to aid exploration and using privileged information to facilitate policy learning.</li>
+				<li><b>Sim-to-Real does not directly work</b> for such contact-rich and highly dynamic tasks. Even when isolating touch and vision, the pure physics sim-to-real gap remains significant and cannot be bridged by extensive domain randomization alone.</li>
+				<li><b>Simulation is still useful for exploring skills.</b> The dynamic skill of spinning pens with a robotic hand is nearly impossible to achieve with human teleoperation and imitation learning alone. Reinforcement learning in simulation is critical for exploring feasible motion.</li>
+				<li><b>Only a few real-world trajectories are needed for fine-tuning.</b> Although a proprioceptive policy learned purely in simulation does not work directly in the real world, it can be fine-tuned to adapt to real-world physics using only a few successful trajectories.</li>
+			</ul>
+		</div>
+		<div style="width: 12.5%">
+		</div>
+	</div> -->
+
+	<!--------------------- Bibtex --------------------->
+	<!-- <div class="content-div"></div>
+	<center><h2> Bibtex </h2></center>
+	<div class="content-div"></div>
+	<pre>
+	  @article{wang2024penspin,
+	     author={Wang, Jun and Yuan, Ying and Che, Haichuan and Qi, Haozhi and Ma, Yi and Malik, Jitendra and Wang, Xiaolong},
+	     title={Lessons from Learning to Spin “Pens”},
+	     journal={arXiv:2407.18902},
+	     year={2024}
+	   }
+	</pre> -->
+
+	<!--------------------- Acknowledgement --------------------->
+	<center>
+		<h2> Acknowledgement </h2>
+		<div class="content-div"></div>
+		<p style="width:75%; text-align: justify; white-space: normal;"> Website template modified from <a href="https://nerfies.github.io/" target="_blank"> NeRFies</a> and <a href="https://penspin.github.io/" target="_blank"> Lessons from Learning to Spin “Pens”</a>.</p>
+    <p style="width:75%; text-align: justify; white-space: normal;"> This website is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"> Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+		<p style="width:75%; text-align: justify; white-space: normal;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+	</center>
+
+	<div class="section-div"></div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="res/js/bootstrap.min.js"></script>
+</div>
+
 </html>
