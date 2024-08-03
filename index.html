@@ -144,183 +144,35 @@
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
+      <h2>Physical Environment Setup</h2>
+      <div class="content-div"></div>
+      <div
+        id="model-container"
+        style="
+          width: 75%;
+          height: 400px;
+          background-color: white;
+          margin: 20px auto;
+          border-radius: 10px;
+        "
+      ></div>
+
+      <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/examples/jsm/loaders/GLTFLoader": "https://unpkg.com/three@0.160.0/examples/jsm/loaders/GLTFLoader.js",
+            "three/examples/jsm/controls/OrbitControls": "https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js"
+          }
+        }
+      </script>
+      <script type="module">
+        import { initModelViewer } from "./res/js/model-viewer.js";
+        document.addEventListener("DOMContentLoaded", () => {
+          initModelViewer("model-container", "./res/static/3dmodel/sope.gltf");
+        });
+      </script>
     </center>
-
-    <div class="content-div"></div>
-
-    <!-- <center>
-		<h2> Real-world Results </h2>
-	</center>
-	<div class="content-div"></div>
-	<div class="col">
-		<center><video playsinline autoplay loop muted controls src="their_videos/teaser_web.mp4" width="100%" preload="metadata"
-			   style="border-radius:10px;"></video>
-		</center>
-	</div>
-
-	<center>
-		<div class="section-div"></div>
-		<h2> Sim-to-Real does not work for Pen Spinning </h2>
-
-		<p style="width:75%; text-align: justify; white-space: normal;">
-			Despite the great progress in sim-to-real for in-hand manipulation, we find that it does not directly apply to our task due to the large sim-to-real gap.
-			While this gap generally exists in previous work, the extreme difficulty of spinning pen-like objects exacerbates it further.
-			Although we did extensive exploration and iterations on hardware design, object selection, and different input modalities, we have not achieved any success.
-			The object is always easily dropped or even completely fails due to the distribution shift.
-		</p>
-
-		<center>
-			<video playsinline autoplay loop muted controls src="their_videos/sim2real_fail1.mp4" width="99%" style="border-radius:10px;"></video>
-		</center>
-
-		<center>
-			<video playsinline autoplay loop muted controls src="their_videos/sim2real_fail2.mp4" width="99%" style="border-radius:10px;"></video>
-		</center>
-	</center>
-
-	<center>
-		<div class="section-div"></div>
-		<h2> How did we achieve this? </h2>
-		<div class="content-div"></div>
-		<img class="img-fluid" src="res/method.png" style="margin-bottom: 30px" width="100%" alt=""><br>
-		<p style="width:75%; text-align: justify; white-space: normal;"> An overview of our approach. We first train an oracle policy in simulation using reinforcement learning. This policy provides high-quality trajectory and action datasets. We use this dataset to train a student policy and as an open-loop controller in the real world to collect successful real-world trajectories. Finally, we fine-tune the student policy using this real-world dataset. </p>
-	</center>
-
-
-	<div class="section-div"></div>
-	<center>
-	<h2> Qualitative Comparison for Oracle Policy </h2>
-	</center>
-	<div class="content-div"></div>
-	<div class="row align-items-center">
-		<div class="col-md-4 align-column-center">
-			<center>
-				<h5> Our Method. </h5>
-				Emergent Fingergaiting. <br>
-				Continuous Spinning.
-			</center>
-			<div class="content-div"></div>
-			<center>
-				<video playsinline autoplay loop muted src="their_videos/ours.mp4" width="99%" style="border-radius:10px;"></video>
-			</center>
-		</div>
-		<div class="col-md-4 align-column-center">
-			<center>
-				<h5> Single Canonical Pose </h5>
-				No Fingergaiting. <br>
-				Inefficient exploration.
-				<div class="content-div"></div>
-				<video playsinline autoplay loop muted src="their_videos/sim_single_init.mp4" width="99%" style="border-radius:10px;"></video>
-			</center>
-		</div>
-		<div class="col-md-4 align-column-center">
-			<center>
-				<h5> Without Z-reward </h5>
-				Objects tilted in certain timesteps. <br>
-				Easily slip in the real-world. <br>
-				<div class="content-div"></div>
-				<video playsinline autoplay loop muted src="their_videos/sim_no_z.mp4" width="99%" style="border-radius:10px;"></video>
-			</center>
-		</div>
-	</div>
-
-
-	<div class="section-div"></div>
-	<center>
-	<h2> Failure Cases (Baselines) </h2>
-	</center>
-	<div class="content-div"></div>
-	<div class="row align-items-center">
-		<div class="col-md-4 align-column-center">
-			<center>
-				<h5> Open-loop Replay </h5>
-				The motion is reasonable but not reactive and generalizable enough.
-				<div class="content-div"></div>
-				<video playsinline autoplay loop muted src="their_videos/fail_teacher_replay.mp4" width="99%" style="border-radius:10px;"></video>
-			</center>
-		</div>
-		<div class="col-md-4 align-column-center">
-			<center>
-				<h5> Simulation Pre-training Only </h5>
-				Not able to finish the task since the large sim-to-real gap.
-				<div class="content-div"></div>
-				<video playsinline autoplay loop muted src="their_videos/fail_only_pretraining.mp4" width="99%" style="border-radius:10px;"></video>
-			</center>
-		</div>
-		<div class="col-md-4 align-column-center">
-			<center>
-				<h5> Vision Distillation </h5>
-				Object oscillates resulting in large OOD error for vision systems.
-				<div class="content-div"></div>
-				<video playsinline autoplay loop muted src="their_videos/fail_vision.mp4" width="99%" style="border-radius:10px;"></video>
-			</center>
-		</div>
-	</div>
-
-	<div class="section-div"></div>
-	<center>
-	<h2> Failure Cases (Our Method) </h2>
-	</center>
-	<div class="content-div"></div>
-	<div class="row align-items-center">
-		<div class="col-md-4 align-column-center">
-			<center>
-Control Frequency not high enough to catch fast falling objects.
-			<div class="content-div"></div>
-				<video playsinline autoplay loop muted src="their_videos/ours_fail1.mp4" width="99%"
-				       style="border-radius:10px;"></video>
-			</center>
-		</div>
-		<div class="col-md-4 align-column-center">
-			<center>
-Control Frequency not high enough to catch fast falling objects.
-				<div class="content-div"></div>
-				<video playsinline autoplay loop muted src="their_videos/ours_fail2.mp4" width="99%"
-				       style="border-radius:10px;"></video>
-			</center>
-		</div>
-		<div class="col-md-4 align-column-center">
-			<center>
-				Center-of-mass shifts during spinning, resulting in unstable configuration.
-				<div class="content-div"></div>
-				<video playsinline autoplay loop muted src="their_videos/ours_fail3.mp4" width="99%"
-				       style="border-radius:10px;"></video>
-			</center>
-		</div>
-	</div>
-
-	<div class="section-div"></div>
-	<center>
-	<h2> Lessons Learned </h2>
-	</center>
-	<div class="content-div"></div>
-	<div class="row align-items-center">
-		<div style="width: 12.5%">
-		</div>
-		<div style="width:75%; hyphens: auto; ">
-			<ul>
-				<li><b>Simulation training requires extensive design for exploration</b>, such as the proper design of initial distributions to aid exploration and using privileged information to facilitate policy learning.</li>
-				<li><b>Sim-to-Real does not directly work</b> for such contact-rich and highly dynamic tasks. Even when isolating touch and vision, the pure physics sim-to-real gap remains significant and cannot be bridged by extensive domain randomization alone.</li>
-				<li><b>Simulation is still useful for exploring skills.</b> The dynamic skill of spinning pens with a robotic hand is nearly impossible to achieve with human teleoperation and imitation learning alone. Reinforcement learning in simulation is critical for exploring feasible motion.</li>
-				<li><b>Only a few real-world trajectories are needed for fine-tuning.</b> Although a proprioceptive policy learned purely in simulation does not work directly in the real world, it can be fine-tuned to adapt to real-world physics using only a few successful trajectories.</li>
-			</ul>
-		</div>
-		<div style="width: 12.5%">
-		</div>
-	</div> -->
-
-    <!--------------------- Bibtex --------------------->
-    <!-- <div class="content-div"></div>
-	<center><h2> Bibtex </h2></center>
-	<div class="content-div"></div>
-	<pre>
-	  @article{wang2024penspin,
-	     author={Wang, Jun and Yuan, Ying and Che, Haichuan and Qi, Haozhi and Ma, Yi and Malik, Jitendra and Wang, Xiaolong},
-	     title={Lessons from Learning to Spin “Pens”},
-	     journal={arXiv:2407.18902},
-	     year={2024}
-	   }
-	</pre> -->
 
     <!--------------------- Acknowledgement --------------------->
     <center>
