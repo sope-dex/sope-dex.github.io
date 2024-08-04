@@ -193,10 +193,39 @@
       </script>
       <script type="module">
         import { initModelViewer } from "./res/js/model-viewer.js";
+
         document.addEventListener("DOMContentLoaded", () => {
+          const container = document.getElementById("model-container");
+
+          // Set container style
+          container.style.borderRadius = "10px";
+          container.style.overflow = "hidden";
+          container.style.width = "87%";
+
+          // Create loading indicator
+          const loadingIndicator = document.createElement("div");
+          loadingIndicator.style.position = "absolute";
+          loadingIndicator.style.top = "50%";
+          loadingIndicator.style.left = "50%";
+          loadingIndicator.style.transform = "translate(-50%, -50%)";
+          loadingIndicator.textContent = "Loading: 0%";
+          container.appendChild(loadingIndicator);
+
           initModelViewer(
             "model-container",
-            "./res/static/3dmodel/sopePhyEnv.gltf"
+            "./res/static/3dmodel/sopePhyEnv.gltf",
+            {
+              // Set loading indicator
+              onProgress: (percentage) => {
+                loadingIndicator.textContent = `Loading: ${percentage.toFixed(
+                  0
+                )}%`;
+              },
+              onLoad: () => {
+                loadingIndicator.style.display = "none";
+              },
+              backgroundColor: 0xcccccc, // Set background color
+            }
           );
         });
       </script>
