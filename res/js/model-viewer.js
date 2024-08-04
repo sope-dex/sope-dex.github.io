@@ -13,6 +13,7 @@ function initModelViewer(containerId, modelPath) {
   );
 
   const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setClearColor(0xcccccc);
   renderer.setSize(container.clientWidth, container.clientHeight);
   container.appendChild(renderer.domElement);
