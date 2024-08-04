@@ -5,14 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>SOPE-DEX</title>
     <link href="res/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="res/css/fa.js"></script>
+    <link href="res/css/video-container.css" rel="stylesheet" />
+    <script src="res/js/fa.js"></script>
 
     <style>
       .header {
         width: auto;
         padding-top: 4rem;
-        padding-bottom: 2rem;
+        padding-bottom: 0rem;
       }
+      .header h1 {
+        font-size: 40px;
+        font-family: 'Helvetica Neue';
+        font-weight: 600;
+        color: #000000c0;
+        line-height: 1.4;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        margin: 30px 0;
+        padding: 1px;
+        text-align: center; /* 确保文本居中 */
+      }
+    
 
       a:link,
       a:visited {
@@ -48,11 +61,10 @@
     <center>
       <h1>
         Learning to Singulate Objects in Packed
-        <br />
-        Environments using a Dexterous Hand
+        Environments <br /> using a Dexterous Hand
       </h1>
-    </center>
-    <div class="content-div"></div>
+  </div>
+    
     <center>
       <a
         href="https://haojiang4400.github.io/"
@@ -113,6 +125,8 @@
       </div>
     </center>
   </div>
+  <div class="content-div"></div>
+  <div class="content-div"></div>
 
   <div class="container">
     <!--------------------- abstract --------------------->
@@ -179,6 +193,8 @@
           background-color: white;
           margin: 20px auto;
           border-radius: 10px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
         "
       ></div>
 
@@ -233,10 +249,9 @@
     </center>
     <div class="content-div"></div>
     <div class="row align-items-center">
-      <div class="col-md-4 align-column-center">
+      <div class="col-md-4 align-column-center align-bottom">
         <center>
           <h5>Three Blocks</h5>
-          <div class="content-div"></div>
           <video
             playsinline
             autoplay
@@ -248,10 +263,9 @@
           ></video>
         </center>
       </div>
-      <div class="col-md-4 align-column-center">
+      <div class="col-md-4 align-column-center align-bottom">
         <center>
           <h5>Four Blocks (Normal)</h5>
-          <div class="content-div"></div>
           <video
             playsinline
             autoplay
@@ -263,16 +277,15 @@
           ></video>
         </center>
       </div>
-      <div class="col-md-4 align-column-center">
+      <div class="col-md-4 align-column-center align-bottom">
         <center>
-          <h5>Four Blocks (Constrained)</h5>
-          <div class="content-div"></div>
+          <h5>Four Blocks (Packed)</h5>
           <video
             playsinline
             autoplay
             loop
             muted
-            src="videos/policy_generalization/four.mov"
+            src="videos/policy_generalization/four_packed.mov"
             width="105%"
             style="border-radius: 10px"
           ></video>
@@ -386,12 +399,11 @@
       <div style="width: 12.5%"></div>
     </div>
 
-    <!--------------------- Bibtex --------------------->
+    <!--------------------- BibTeX --------------------->
     <div class="content-div"></div>
     <center>
-      <h2>Bibtex</h2>
+      <h2>BibTeX</h2>
     </center>
-    <div class="content-div"></div>
     <pre>
 	  @article{TBD,
 	     author={Hao Jiang, Yuhai Wang, Hanyang Zhou, Daniel Seita},
