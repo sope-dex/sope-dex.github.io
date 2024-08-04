@@ -1,8 +1,0 @@
-#  
-#  Wavefront MTL
-#  
-#  
-
-newmtl material_0
-map_Kd textured_output.jpg
-#  
