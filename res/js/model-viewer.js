@@ -38,33 +38,33 @@ function initModelViewer(containerId, modelPath) {
       const size = box.getSize(new THREE.Vector3());
       const maxDim = Math.max(size.x, size.y, size.z);
 
-      // 设置自定义的初始角度（弧度）
-      const initialAngleX = -Math.PI / 10; // 绕 X 轴旋转（俯仰角）
-      const initialAngleY = Math.PI / 10; // 绕 Y 轴旋转（偏航角）
-      const initialAngleZ = -Math.PI / 20; // 绕 Z 轴旋转（翻滚角）
+      // Set the initial angles for the camera(radians)
+      const initialAngleX = -Math.PI / 10; // Rotate around X axis (pitch angle)
+      const initialAngleY = Math.PI / 10; // Rotate around Y axis (yaw angle)
+      const initialAngleZ = -Math.PI / 20; // Rotate around Z axis (roll angle)
 
-      // 设置自定义的初始距离系数（越小越近）
+      // Set the distance factor from the camera to the center of the box
       const distanceFactor = 0.45;
 
-      // 计算相机位置
+      // According to the initial angle and distance factor, calculate the distance from the camera to the center of the box
       const distance = maxDim * distanceFactor;
 
-      // 创建一个表示相机方向的向量
+      // Use the direction from the camera to the center of the box
       const direction = new THREE.Vector3(0, 0, 1);
 
-      // 创建一个四元数来表示旋转
+      // Create a quaternion representing the initial angles
       const quaternion = new THREE.Quaternion().setFromEuler(
         new THREE.Euler(initialAngleX, initialAngleY, initialAngleZ, "XYZ")
       );
 
-      // 应用旋转到方向向量
+      // Apply the quaternion to the direction vector
       direction.applyQuaternion(quaternion);
 
-      // 计算相机位置
+      // Set the camera position
       camera.position.copy(center).add(direction.multiplyScalar(distance));
 
       camera.lookAt(center);
-      camera.up.set(0, 1, 0); // 确保相机的 "上" 方向正确
+      camera.up.set(0, 1, 0); // Make sure the camera's up is Y axis
 
       controls.target.copy(center);
       controls.update();
@@ -78,10 +78,10 @@ function initModelViewer(containerId, modelPath) {
       controls.update();
     },
     function (xhr) {
-      console.log((xhr.loaded / xhr.total) * 100 + "% 加载完成");
+      console.log((xhr.loaded / xhr.total) * 100 + "% Loaded");
     },
     function (error) {
-      console.error("加载模型时发生错误", error);
+      console.error("Error Occured During Loading the Scene", error);
     }
   );
 
