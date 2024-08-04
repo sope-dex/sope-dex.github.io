@@ -1,158 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>SOPE-DEX</title>
+    <link href="res/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="res/css/fa.js"></script>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>SOPE-DEX</title>
-  <link href="res/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="res/css/fa.js"></script>
+    <style>
+      .header {
+        width: auto;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+      }
 
-  <style>
-    .header {
-      width: auto;
-      padding-top: 4rem;
-      padding-bottom: 2rem;
-    }
+      a:link,
+      a:visited {
+        color: #0071bc;
+        text-decoration: none;
+      }
 
-    a:link,
-    a:visited {
-      color: #0071bc;
-      text-decoration: none;
-    }
+      a:hover {
+        color: #208799;
+      }
 
-    a:hover {
-      color: #208799;
-    }
+      .section-div {
+        height: 3em;
+      }
 
-    .section-div {
-      height: 3em;
-    }
+      .content-div {
+        height: 1em;
+      }
 
-    .content-div {
-      height: 1em;
-    }
+      .no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+      }
 
-    .no-gutters {
-      margin-right: 0;
-      margin-left: 0;
-    }
+      .btn {
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+      }
+    </style>
+  </head>
 
-    .btn {
-      margin-left: 0.2rem;
-      margin-right: 0.2rem;
-    }
-  </style>
-</head>
+  <div class="header">
+    <center>
+      <h1>
+        Learning to Singulate Objects in Packed
+        <br />
+        Environments using a Dexterous Hand
+      </h1>
+    </center>
+    <div class="content-div"></div>
+    <center>
+      <a
+        href="https://haojiang4400.github.io/"
+        target="_blank"
+        style="font-size: 18px"
+        >Hao Jiang</a
+      ><sup style="font-size: 12px">&nbsp</sup>,&nbsp
+      <a href="https://yuhaiw.github.io" target="_blank" style="font-size: 18px"
+        >Yuhai Wang</a
+      ><sup style="font-size: 12px">&nbsp*</sup>,&nbsp
+      <a
+        href="https://hanyang-zhou.github.io/"
+        target="_blank"
+        style="font-size: 18px"
+        >Hanyang Zhou</a
+      ><sup style="font-size: 12px">&nbsp*</sup>,&nbsp
+      <a
+        href="https://danielseita.github.io/"
+        target="_blank"
+        style="font-size: 18px"
+        >Daniel Seita</a
+      ><sup style="font-size: 12px">&nbsp</sup>
+    </center>
 
-<div class="header">
-  <center>
-    <h1>
-      Learning to Singulate Objects in Packed
-      <br />
-      Environments using a Dexterous Hand
-    </h1>
-  </center>
-  <div class="content-div"></div>
-  <center>
-    <a href="https://haojiang4400.github.io/" target="_blank" style="font-size: 18px">Hao Jiang</a><sup
-      style="font-size: 12px">&nbsp</sup>,&nbsp
-    <a href="https://yuhaiw.github.io" target="_blank" style="font-size: 18px">Yuhai Wang</a><sup
-      style="font-size: 12px">&nbsp*</sup>,&nbsp
-    <a href="https://hanyang-zhou.github.io/" target="_blank" style="font-size: 18px">Hanyang Zhou</a><sup
-      style="font-size: 12px">&nbsp*</sup>,&nbsp
-    <a href="https://danielseita.github.io/" target="_blank" style="font-size: 18px">Daniel Seita</a><sup
-      style="font-size: 12px">&nbsp</sup>
-  </center>
+    <center>
+      <sup style="font-size: 12px">&nbsp*</sup> Equal Contribution
+    </center>
 
-  <center>
-    <sup style="font-size: 12px">&nbsp*</sup> Equal Contribution
-  </center>
+    <div class="content-div"></div>
+    <center>&nbspUniversity of Southern California&nbsp</center>
 
-  <div class="content-div"></div>
-  <center>&nbspUniversity of Southern California&nbsp</center>
+    <div class="content-div"></div>
+    <center>
+      <div class="btn-group" role="group">
+        <a href="https://arxiv.org/" target="_blank">
+          <button type="button" class="btn btn-dark">
+            <span class="icon"> <i class="fas fa-file-pdf"></i> Paper </span>
+          </button>
+        </a>
 
-  <div class="content-div"></div>
-  <center>
-    <div class="btn-group" role="group">
-      <a href="https://arxiv.org/" target="_blank">
-        <button type="button" class="btn btn-dark">
-          <span class="icon"> <i class="fas fa-file-pdf"></i> Paper </span>
-        </button>
-      </a>
+        <a href="https://github.com/" target="_blank">
+          <button type="button" class="btn btn-dark">
+            <span class="icon"> <i class="fab fa-github"></i> Code </span>
+          </button>
+        </a>
 
-      <a href="https://github.com/" target="_blank">
-        <button type="button" class="btn btn-dark">
-          <span class="icon"> <i class="fab fa-github"></i> Code </span>
-        </button>
-      </a>
+        <a href="https://www.youtube.com/" target="_blank">
+          <button type="button" class="btn btn-dark">
+            <span class="icon"> <i class="fab fa-youtube"></i> Video </span>
+          </button>
+        </a>
 
-      <a href="https://www.youtube.com/" target="_blank">
-        <button type="button" class="btn btn-dark">
-          <span class="icon"> <i class="fab fa-youtube"></i> Video </span>
-        </button>
-      </a>
+        <a href="https://twitter.com/" target="_blank">
+          <button type="button" class="btn btn-dark">
+            <span class="icon"> <i class="fab fa-twitter"></i> Twitter </span>
+          </button>
+        </a>
+      </div>
+    </center>
+  </div>
 
-      <a href="https://twitter.com/" target="_blank">
-        <button type="button" class="btn btn-dark">
-          <span class="icon"> <i class="fab fa-twitter"></i> Twitter </span>
-        </button>
-      </a>
-    </div>
-  </center>
-</div>
-
-<div class="container">
-  <!--------------------- abstract --------------------->
-  <center>
-    <div class="col">
-      <center>
-        <!-- <iframe width="1120" height="630"
+  <div class="container">
+    <!--------------------- abstract --------------------->
+    <center>
+      <div class="col">
+        <center>
+          <!-- <iframe width="1120" height="630"
           src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=w-u0UVNOTzaH88oh&amp;controls=0"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-        <video playsinline autoplay loop muted src="videos/main.mp4" width="100%" preload="metadata"
-          style="border-radius:10px;"></video>
-      </center>
-    </div>
-    <div class="content-div"></div>
+          <video
+            playsinline
+            autoplay
+            loop
+            muted
+            src="videos/main.mov"
+            width="100%"
+            preload="metadata"
+            style="border-radius: 10px"
+          ></video>
+        </center>
+      </div>
+      <div class="content-div"></div>
 
-    <h2>Abstract</h2>
-    <div class="content-div"></div>
-    <p style="width: 75%; text-align: justify; white-space: normal">
-      Robotic object singulation, where a robot must isolate, grasp, and retrieve a target object in a cluttered
-      environment, is a fundamental challenge in robotic manipulation.
-      This task is difficult due to occlusions and how other objects act as obstacles for manipulation. A robot must
-      also reason about the effect of object-object interactions as it tries to singulate the target.
-      Prior work has explored object singulation in scenarios where there is enough free space to perform relatively
-      long pushes to separate objects, in contrast to when space is tight and objects have little separation from each
-      other.
-      In this paper, we propose the Singulating Objects in Packed Environments (<strong>SOPE</strong>) framework.
-      We propose a novel method that involves a displacement-based state representation and a multi-phase reinforcement
-      learning procedure that enables singulation using the 16-DOF Allegro Hand.
-      We demonstrate extensive experiments in Isaac Gym simulation, showing the ability of our system to singulate a
-      target object in clutter. We directly transfer the policy trained in simulation to the real world. Over <strong>250</strong>
-      physical robot manipulation trials, our method obtains success rates of <strong>79.2%</strong>, outperforming alternative learning
-      and non-learning methods.
-    </p>
-    <div class="content-div"></div>
+      <h2>Abstract</h2>
+      <div class="content-div"></div>
+      <p style="width: 75%; text-align: justify; white-space: normal">
+        Robotic object singulation, where a robot must isolate, grasp, and
+        retrieve a target object in a cluttered environment, is a fundamental
+        challenge in robotic manipulation. This task is difficult due to
+        occlusions and how other objects act as obstacles for manipulation. A
+        robot must also reason about the effect of object-object interactions as
+        it tries to singulate the target. Prior work has explored object
+        singulation in scenarios where there is enough free space to perform
+        relatively long pushes to separate objects, in contrast to when space is
+        tight and objects have little separation from each other. In this paper,
+        we propose the Singulating Objects in Packed Environments
+        (<strong>SOPE</strong>) framework. We propose a novel method that
+        involves a displacement-based state representation and a multi-phase
+        reinforcement learning procedure that enables singulation using the
+        16-DOF Allegro Hand. We demonstrate extensive experiments in Isaac Gym
+        simulation, showing the ability of our system to singulate a target
+        object in clutter. We directly transfer the policy trained in simulation
+        to the real world. Over <strong>250</strong> physical robot manipulation
+        trials, our method obtains success rates of <strong>79.2%</strong>,
+        outperforming alternative learning and non-learning methods.
+      </p>
+      <div class="content-div"></div>
 
-    <h2>Physical Environment Setup</h2>
-    <div class="content-div"></div>
-    <p style="width:75%; text-align: justify; white-space: normal;">
-      Feel free to explore our experiment environment. We provide the 3D model of our experimental setup. You can
-      interact with the model by dragging and zooming in/out. The model is interactive and can be rotated in 3D space.
-    </p>
-    <div id="model-container" style="
+      <h2>Physical Environment Setup</h2>
+      <div class="content-div"></div>
+      <p style="width: 75%; text-align: justify; white-space: normal">
+        Feel free to explore our experiment environment. We provide the 3D model
+        of our experimental setup. You can interact with the model by dragging
+        and zooming in/out. The model is interactive and can be rotated in 3D
+        space.
+      </p>
+      <div
+        id="model-container"
+        style="
           width: 75%;
           height: 400px;
           background-color: white;
           margin: 20px auto;
           border-radius: 10px;
-        "></div>
+        "
+      ></div>
 
-    <script type="importmap">
+      <script type="importmap">
         {
           "imports": {
             "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
@@ -161,166 +191,240 @@
           }
         }
       </script>
-    <script type="module">
-      import { initModelViewer } from "./res/js/model-viewer.js";
-      document.addEventListener("DOMContentLoaded", () => {
-        initModelViewer("model-container", "./res/static/3dmodel/sope.gltf");
-      });
-    </script>
-  </center>
+      <script type="module">
+        import { initModelViewer } from "./res/js/model-viewer.js";
+        document.addEventListener("DOMContentLoaded", () => {
+          initModelViewer("model-container", "./res/static/3dmodel/sope.gltf");
+        });
+      </script>
+    </center>
 
-  <center>
+    <center>
+      <div class="section-div"></div>
+      <h2>How did we achieve this?</h2>
+      <div class="content-div"></div>
+      <img
+        class="img-fluid"
+        src="res/method.png"
+        style="margin-bottom: 30px"
+        width="90%"
+        alt=""
+      /><br />
+      <p style="width: 75%; text-align: justify; white-space: normal">
+        An overview of our approach. We first ... and then ...
+      </p>
+    </center>
+
     <div class="section-div"></div>
-    <h2> How did we achieve this? </h2>
+
+    <center>
+      <h2>Policy Performance Under Different Environments</h2>
+    </center>
     <div class="content-div"></div>
-    <img class="img-fluid" src="res/method.png" style="margin-bottom: 30px" width="90%" alt=""><br>
-    <p style="width:75%; text-align: justify; white-space: normal;">
-      An overview of our approach. We first ... and then ...
-    </p>
-  </center>
+    <div class="row align-items-center">
+      <div class="col-md-4 align-column-center">
+        <center>
+          <h5>Three Blocks</h5>
+          <div class="content-div"></div>
+          <video
+            playsinline
+            autoplay
+            loop
+            muted
+            src="videos/policy_generalization/three.mov"
+            width="99%"
+            style="border-radius: 10px"
+          ></video>
+        </center>
+      </div>
+      <div class="col-md-4 align-column-center">
+        <center>
+          <h5>Four Blocks (Normal)</h5>
+          <div class="content-div"></div>
+          <video
+            playsinline
+            autoplay
+            loop
+            muted
+            src="videos/policy_generalization/four.mov"
+            width="99%"
+            style="border-radius: 10px"
+          ></video>
+        </center>
+      </div>
+      <div class="col-md-4 align-column-center">
+        <center>
+          <h5>Four Blocks (Constrained)</h5>
+          <div class="content-div"></div>
+          <video
+            playsinline
+            autoplay
+            loop
+            muted
+            src="videos/policy_generalization/four.mov"
+            width="99%"
+            style="border-radius: 10px"
+          ></video>
+        </center>
+      </div>
+    </div>
 
-  <div class="section-div"></div>
+    <div class="section-div"></div>
 
-  <center>
-    <h2> Policy Performance Under Different Environments </h2>
-  </center>
-  <div class="content-div"></div>
-  <div class="row align-items-center">
-    <div class="col-md-4 align-column-center">
-      <center>
-        <h5> Three Blocks </h5>
-        <div class="content-div"></div>
-        <video playsinline autoplay loop muted src="videos/policy_generalization/three.mp4" width="99%"
-          style="border-radius:10px;"></video>
-      </center>
+    <center>
+      <h2>Policy Performance Under Human Intervention</h2>
+    </center>
+    <div class="content-div"></div>
+    <div class="row align-items-center">
+      <div class="col-md-6 align-column-center">
+        <center>
+          <div class="content-div"></div>
+          <video
+            playsinline
+            autoplay
+            loop
+            muted
+            src="videos/human_intervention/left_view.mov"
+            width="99%"
+            style="border-radius: 10px"
+          ></video>
+        </center>
+      </div>
+      <div class="col-md-6 align-column-center">
+        <center>
+          <div class="content-div"></div>
+          <video
+            playsinline
+            autoplay
+            loop
+            muted
+            src="videos/human_intervention/left_view2.mov"
+            width="99%"
+            style="border-radius: 10px"
+          ></video>
+        </center>
+      </div>
+      <div class="col-md-6 align-column-center">
+        <center>
+          <div class="content-div"></div>
+          <video
+            playsinline
+            autoplay
+            loop
+            muted
+            src="videos/human_intervention/front_view.mov"
+            width="99%"
+            style="border-radius: 10px"
+          ></video>
+        </center>
+      </div>
+      <div class="col-md-6 align-column-center">
+        <center>
+          <div class="content-div"></div>
+          <video
+            playsinline
+            autoplay
+            loop
+            muted
+            src="videos/human_intervention/back_view.mov"
+            width="99%"
+            style="border-radius: 10px"
+          ></video>
+        </center>
+      </div>
     </div>
-    <div class="col-md-4 align-column-center">
-      <center>
-        <h5> Four Blocks (normal) </h5>
-        <div class="content-div"></div>
-        <video playsinline autoplay loop muted src="videos/policy_generalization/four.mp4" width="99%"
-          style="border-radius:10px;"></video>
-      </center>
-    </div>
-    <div class="col-md-4 align-column-center">
-      <center>
-        <div class="content-div"></div>
-        <h5> Four Blocks (constrained) </h5>
-        <div class="content-div"></div>
-        <video playsinline autoplay loop muted src="videos/policy_generalization/four_packed.mp4" width="99%"
-          style="border-radius:10px;"></video>
-      </center>
-    </div>
-  </div>
 
-  <div class="section-div"></div>
+    <div class="section-div"></div>
 
-  <center>
-    <h2> Policy Performance Under Human Intervention </h2>
-  </center>
-  <div class="content-div"></div>
-  <div class="row align-items-center">
-    <div class="col-md-6 align-column-center">
-      <center>
-        <div class="content-div"></div>
-        <video playsinline autoplay loop muted src="videos/human_intervention/left_view.mp4" width="99%"
-          style="border-radius:10px;"></video>
-      </center>
+    <center>
+      <h2>Lessons Learned</h2>
+    </center>
+    <div class="content-div"></div>
+    <div class="row align-items-center">
+      <div style="width: 12.5%"></div>
+      <div style="width: 75%; hyphens: auto">
+        <ul>
+          <li>
+            <b>Simulation training requires extensive design for exploration</b
+            >, such as the proper design of initial distributions to aid
+            exploration and using privileged information to facilitate policy
+            learning.
+          </li>
+          <li>
+            <b>Sim-to-Real does not directly work</b> for such contact-rich and
+            highly dynamic tasks. Even when isolating touch and vision, the pure
+            physics sim-to-real gap remains significant and cannot be bridged by
+            extensive domain randomization alone.
+          </li>
+          <li>
+            <b>Simulation is still useful for exploring skills.</b> The dynamic
+            skill of spinning pens with a robotic hand is nearly impossible to
+            achieve with human teleoperation and imitation learning alone.
+            Reinforcement learning in simulation is critical for exploring
+            feasible motion.
+          </li>
+          <li>
+            <b
+              >Only a few real-world trajectories are needed for fine-tuning.</b
+            >
+            Although a proprioceptive policy learned purely in simulation does
+            not work directly in the real world, it can be fine-tuned to adapt
+            to real-world physics using only a few successful trajectories.
+          </li>
+        </ul>
+      </div>
+      <div style="width: 12.5%"></div>
     </div>
-    <div class="col-md-6 align-column-center">
-      <center>
-        <div class="content-div"></div>
-        <video playsinline autoplay loop muted src="videos/human_intervention/left_view2.mp4" width="99%"
-          style="border-radius:10px;"></video>
-      </center>
-    </div>
-    <div class="col-md-6 align-column-center">
-      <center>
-        <div class="content-div"></div>
-        <video playsinline autoplay loop muted src="videos/human_intervention/front_view.mp4" width="99%"
-          style="border-radius:10px;"></video>
-      </center>
-    </div>
-    <div class="col-md-6 align-column-center">
-      <center>
-        <div class="content-div"></div>
-        <video playsinline autoplay loop muted src="videos/human_intervention/back_view.mp4" width="99%"
-          style="border-radius:10px;"></video>
-      </center>
-    </div>
-  </div>
 
-  <div class="section-div"></div>
-
-  <center>
-    <h2> Lessons Learned </h2>
-  </center>
-  <div class="content-div"></div>
-  <div class="row align-items-center">
-    <div style="width: 12.5%">
-    </div>
-    <div style="width:75%; hyphens: auto; ">
-      <ul>
-        <li><b>Simulation training requires extensive design for exploration</b>, such as the proper design of initial
-          distributions to aid exploration and using privileged information to facilitate policy learning.</li>
-        <li><b>Sim-to-Real does not directly work</b> for such contact-rich and highly dynamic tasks. Even when
-          isolating touch and vision, the pure physics sim-to-real gap remains significant and cannot be bridged by
-          extensive domain randomization alone.</li>
-        <li><b>Simulation is still useful for exploring skills.</b> The dynamic skill of spinning pens with a robotic
-          hand is nearly impossible to achieve with human teleoperation and imitation learning alone. Reinforcement
-          learning in simulation is critical for exploring feasible motion.</li>
-        <li><b>Only a few real-world trajectories are needed for fine-tuning.</b> Although a proprioceptive policy
-          learned purely in simulation does not work directly in the real world, it can be fine-tuned to adapt to
-          real-world physics using only a few successful trajectories.</li>
-      </ul>
-    </div>
-    <div style="width: 12.5%">
-    </div>
-  </div>
-
-  <!--------------------- Bibtex --------------------->
-  <div class="content-div"></div>
-  <center>
-    <h2> Bibtex </h2>
-  </center>
-  <div class="content-div"></div>
-  <pre>
+    <!--------------------- Bibtex --------------------->
+    <div class="content-div"></div>
+    <center>
+      <h2>Bibtex</h2>
+    </center>
+    <div class="content-div"></div>
+    <pre>
 	  @article{wang2024penspin,
 	     author={Wang, Jun and Yuan, Ying and Che, Haichuan and Qi, Haozhi and Ma, Yi and Malik, Jitendra and Wang, Xiaolong},
 	     title={Lessons from Learning to Spin “Pens”},
 	     journal={arXiv:2407.18902},
 	     year={2024}
 	   }
-	</pre>
+	</pre
+    >
 
-  <!--------------------- Acknowledgement --------------------->
-  <center>
-    <h2>Acknowledgement</h2>
-    <div class="content-div"></div>
-    <p style="width: 75%; text-align: justify; white-space: normal">
-      Website template modified from
-      <a href="https://nerfies.github.io/" target="_blank"> NeRFies</a> and
-      <a href="https://penspin.github.io/" target="_blank">
-        Lessons from Learning to Spin “Pens”</a>.
-    </p>
-    <p style="width: 75%; text-align: justify; white-space: normal">
-      This website is licensed under a
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
-        Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-    </p>
-    <p style="width: 75%; text-align: justify; white-space: normal">
-      We thank Chen Wang, Yuzhe Qin, Haozhi Qi, and Binghao Huang for helpful advice on using the Allegro Hand with
-      Isaac Gym and on setting up the real world experiments.
-      We thank Vedant Raval and Harshitha Rajaprakash for helpful writing feedback.
-    </p>
-  </center>
+    <!--------------------- Acknowledgement --------------------->
+    <center>
+      <h2>Acknowledgement</h2>
+      <div class="content-div"></div>
+      <p style="width: 75%; text-align: justify; white-space: normal">
+        Website template modified from
+        <a href="https://nerfies.github.io/" target="_blank"> NeRFies</a> and
+        <a href="https://penspin.github.io/" target="_blank">
+          Lessons from Learning to Spin “Pens”</a
+        >.
+      </p>
+      <p style="width: 75%; text-align: justify; white-space: normal">
+        This website is licensed under a
+        <a
+          href="https://creativecommons.org/licenses/by-sa/4.0/"
+          target="_blank"
+        >
+          Creative Commons Attribution-ShareAlike 4.0 International License</a
+        >.
+      </p>
+      <p style="width: 75%; text-align: justify; white-space: normal">
+        We thank Chen Wang, Yuzhe Qin, Haozhi Qi, and Binghao Huang for helpful
+        advice on using the Allegro Hand with Isaac Gym and on setting up the
+        real world experiments. We thank Vedant Raval and Harshitha Rajaprakash
+        for helpful writing feedback.
+      </p>
+    </center>
 
-  <div class="section-div"></div>
+    <div class="section-div"></div>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="res/js/bootstrap.min.js"></script>
-</div>
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="res/js/bootstrap.min.js"></script>
+  </div>
 </html>
